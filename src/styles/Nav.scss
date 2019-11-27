@@ -1,0 +1,21 @@
+nav {
+  height: 10vh;
+}
+
+.logo {
+  font-family: "Cinzel";
+  letter-spacing: -5px;
+  font-size: 60px;
+  text-decoration: none;
+  color: rgb(40, 216, 207);
+}
+
+.nav-header {
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

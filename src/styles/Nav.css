@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  height: 10vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #e6e6e6), color-stop(50%, #272727));
+  background: linear-gradient(90deg, #e6e6e6 50%, #272727 50%);
+}
+
+.logo {
+  font-family: "Oswald";
+  font-size: 60px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-header {
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=Nav.css.map */
