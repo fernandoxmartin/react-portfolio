@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald|Cinzel|Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Lato|Cinzel|Poppins&display=swap");
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(60deg, rgb(25, 25, 25) 50%, rgb(40, 40, 40) 50%);
+  background: rgb(49, 49, 49);
 }
 
 code {

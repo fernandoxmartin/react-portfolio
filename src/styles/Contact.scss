@@ -1,0 +1,58 @@
+.contact-container {
+  height: 90vh;
+}
+
+.feedback {
+  text-align: center;
+  font-family: "Poppins";
+  padding-bottom: 50px;
+  color: rgb(0, 0, 0);
+}
+
+.feedback h2 {
+  font-size: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 500px;
+  margin: 0 auto;
+  height: 50vh;
+}
+
+.label {
+  color: rgb(0, 0, 0);
+  text-align: left;
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+
+.input {
+  background: rgba(0, 0, 0, 0.8);
+  height: 50px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-family: "Poppins";
+}
+
+.input:focus {
+  outline: none;
+}
+
+.message {
+  height: 200px;
+  width: 100%;
+}
+
+.submit {
+  background: linear-gradient(to bottom, rgb(40, 216, 207), rgb(50, 50, 50));
+  border: none;
+  height: 30px;
+  font-family: "Oswald";
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

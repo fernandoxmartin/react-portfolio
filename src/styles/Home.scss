@@ -10,7 +10,7 @@
     justify-content: flex-end;
     align-items: center;
     a {
-      color: rgb(60, 60, 60);
+      color: rgb(30, 30, 30);
       font-size: 22px;
       transition: 0.2s ease;
       padding: 5px;
@@ -30,7 +30,7 @@
       writing-mode: vertical-rl;
       text-orientation: mixed;
       text-decoration: none;
-      color: rgb(90, 90, 90);
+      color: rgb(30, 30, 30);
       font-family: sans-serif;
       font-weight: bolder;
       transition: 0.2s ease;
@@ -43,51 +43,36 @@
   }
 
   .center {
+    height: 60vh;
     text-align: center;
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     .title {
-      line-height: 80px;
-      text-shadow: 0px 0px 20px rgb(0, 0, 0);
       .name-title {
-        font-size: 120px;
+        line-height: 130px;
+        font-size: 140px;
         font-family: "Poppins";
+        background: linear-gradient(
+          to bottom,
+          rgb(0, 119, 113),
+          rgb(40, 216, 207)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
       .sub-title {
-        font-size: 30px;
+        font-size: 35px;
         font-family: "Cinzel";
-      }
-    }
-    .summary {
-      width: 40%;
-      .highlight {
-        color: rgb(40, 216, 207);
-      }
-    }
-    .summary-skills {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      ul {
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        list-style: none;
-        width: 40%;
-        color: rgb(40, 216, 207);
-        text-transform: uppercase;
-        font-family: "Poppins";
+        font-weight: 900;
+        color: rgb(30, 30, 30);
       }
     }
   }
 }
 
 svg line {
-  stroke: rgb(100, 100, 100);
+  stroke: rgb(30, 30, 30);
 }
