@@ -1,9 +1,20 @@
 .about-container {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(40, 216, 207, 0.5) 50%,
+      rgba(0, 0, 0, 1)
+    ),
+    url("../images/mountain.jpg");
+  background-size: cover;
+  background-position: center center;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
   .about-container-inner {
     width: 60%;
     height: 60%;
@@ -11,7 +22,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.8);
     .about-left {
       position: relative;
       left: 40px;
@@ -37,21 +47,23 @@
     }
     .about-right {
       width: 50%;
-      height: 100%;
+      height: 70%;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      color: rgb(220, 220, 220);
+      color: rgb(24, 24, 24);
       .summary {
         width: 80%;
         font-family: "Poppins";
         .highlight {
           font-family: "Oswald";
-          color: rgb(40, 216, 207);
+          color: #fff;
           text-transform: uppercase;
-          text-shadow: 0px 0px 5px #000;
+          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+            1px 1px 0 #000;
+          letter-spacing: 1px;
         }
       }
       .summary-skills {
@@ -66,12 +78,69 @@
           flex-direction: row;
           justify-content: space-around;
           align-items: center;
-          list-style: none;
           width: 100%;
-          color: rgb(40, 216, 207);
           text-transform: uppercase;
-          font-family: "Oswald";
-          text-shadow: 0px 0px 5px #000;
+          font-size: 50px;
+          color: #fff;
+          filter: drop-shadow(0px 0px 5px #000);
+          img {
+            filter: invert(100%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-container {
+    background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.8) 50%,
+        rgba(40, 216, 207, 0.5) 50%,
+        rgba(0, 0, 0, 1)
+      ),
+      url("../images/mountain.jpg");
+    background-size: cover;
+    .about-container-inner {
+      width: 100%;
+      height: 80%;
+      flex-direction: column;
+      .about-left {
+        position: initial;
+        height: 200px;
+        width: 200px;
+        &:after {
+          position: initial;
+          content: "";
+        }
+      }
+      .about-right {
+        width: 100%;
+        height: 60%;
+        color: rgb(230, 230, 230);
+        .summary {
+          width: 90%;
+          height: 50%;
+          font-family: "Poppins";
+          .highlight {
+            font-family: "Oswald";
+            color: rgb(255, 90, 0);
+            text-transform: uppercase;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+              1px 1px 0 #000;
+            letter-spacing: 1px;
+          }
+        }
+        .summary-skills {
+          width: 80%;
+          color: rgb(255, 90, 0);
+          ul {
+            font-size: 35px;
+            img {
+              width: 35px;
+            }
+          }
         }
       }
     }

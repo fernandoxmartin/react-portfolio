@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Nav.scss";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import logo from "../images/logo.png";
 
 class Nav extends Component {
@@ -12,7 +12,7 @@ class Nav extends Component {
 
   handleNav() {
     let nav = this.refs.toggleNav;
-    if (this.state.isOpen === false) {
+    if (!this.state.isOpen) {
       this.setState({ isOpen: true });
       nav.style.transform = "translateY(0%)";
     } else {
@@ -21,9 +21,25 @@ class Nav extends Component {
     }
   }
 
+  componentDidMount() {
+    window.addEventListener("scroll", () => {
+      const isTop = window.scrollY > 100;
+      const nav = document.getElementById("nav");
+      if (isTop) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll");
+  }
+
   render() {
     return (
-      <nav>
+      <nav id="nav">
         <div className="nav-header">
           <Link to="/">
             <img className="logo" src={logo} alt="logo" />
@@ -31,19 +47,43 @@ class Nav extends Component {
 
           <div className="nav-links">
             <ul className="list">
-              <Link to="/">
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
                 <span>01.</span>
                 <li>Home</li>
               </Link>
-              <Link to="/about">
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
                 <span>02.</span>
                 <li>About</li>
               </Link>
-              <Link to="/projects">
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
                 <span>03.</span>
                 <li>Projects</li>
               </Link>
-              <Link to="/contact">
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
                 <span>04.</span>
                 <li>Contact</li>
               </Link>
@@ -66,17 +106,49 @@ class Nav extends Component {
         <div className="open-nav" ref="toggleNav">
           <div className="nav-links-mobile">
             <ul className="list-mobile">
-              <Link to="/">
-                <li>Home</li>
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <li>
+                  <span>01. </span>Home
+                </li>
               </Link>
-              <Link to="/about">
-                <li>About</li>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <li>
+                  <span>02. </span>About
+                </li>
               </Link>
-              <Link to="/projects">
-                <li>Projects</li>
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <li>
+                  <span>03. </span>Projects
+                </li>
               </Link>
-              <Link to="/contact">
-                <li>Contact</li>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <li>
+                  <span>04. </span>Contact
+                </li>
               </Link>
             </ul>
           </div>

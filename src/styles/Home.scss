@@ -1,16 +1,26 @@
 .home-container {
-  height: 90vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
   overflow: hidden;
-
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgb(30, 30, 30) 50%,
+    rgb(50, 50, 50) 50%
+  );
+  background-size: cover;
+  width: 100%;
   .social {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     a {
-      color: rgb(30, 30, 30);
+      color: rgb(50, 50, 50);
       font-size: 22px;
       transition: 0.2s ease;
       padding: 5px;
@@ -20,59 +30,115 @@
       }
     }
   }
-
   .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    grid-column: 2/3;
     a {
       writing-mode: vertical-rl;
       text-orientation: mixed;
       text-decoration: none;
-      color: rgb(30, 30, 30);
-      font-family: sans-serif;
+      color: rgb(50, 50, 50);
+      font-family: "Oswald";
+      text-transform: uppercase;
       font-weight: bolder;
       transition: 0.2s ease;
       letter-spacing: 1px;
       &:hover {
         transform: translateY(-5%);
-        color: rgb(40, 216, 207);
+        color: rgb(255, 90, 0);
       }
     }
   }
-
   .center {
-    height: 60vh;
-    text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    .title {
-      .name-title {
-        line-height: 130px;
-        font-size: 140px;
-        font-family: "Poppins";
-        background: linear-gradient(
-          to bottom,
-          rgb(0, 119, 113),
-          rgb(40, 216, 207)
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    height: 100%;
+    width: 100%;
+    grid-column: 2/3;
+    .center-content {
+      margin: 0 auto;
+      text-align: center;
+      .title-container {
+        .title {
+          font-family: "Oswald";
+          text-transform: uppercase;
+          font-size: 120px;
+          line-height: 130px;
+          color: rgb(230, 230, 230);
+        }
+        .subtitle {
+          font-family: "Cinzel";
+          text-transform: uppercase;
+          font-size: 30px;
+          color: rgb(150, 150, 150);
+        }
       }
-      .sub-title {
-        font-size: 35px;
-        font-family: "Cinzel";
-        font-weight: 900;
-        color: rgb(30, 30, 30);
+      &:before {
+        content: "<";
+        position: absolute;
+        left: 30%;
+        top: 35%;
+        font-size: 200px;
+        color: rgba(40, 216, 207, 1);
+        font-family: "Poppins";
+        opacity: 1;
+      }
+      &:after {
+        content: ">";
+        position: absolute;
+        right: 30%;
+        top: 35%;
+        font-size: 200px;
+        color: rgb(255, 90, 0);
+        font-family: "Poppins";
+        opacity: 1;
       }
     }
   }
 }
 
-svg line {
-  stroke: rgb(30, 30, 30);
+.line line {
+  stroke: rgb(50, 50, 50);
+}
+
+@media only screen and (max-width: 600px) {
+  .home-container {
+    display: block;
+    .social {
+      display: none;
+    }
+    .contact {
+      display: none;
+    }
+    .center {
+      .center-content {
+        .title-container {
+          .title {
+            font-size: 70px;
+            line-height: 80px;
+          }
+          .subtitle {
+            font-size: 20px;
+          }
+        }
+        &:before {
+          top: 35%;
+          left: 0%;
+          font-size: 150px;
+        }
+        &:after {
+          top: 35%;
+          right: 0%;
+          font-size: 150px;
+        }
+      }
+    }
+  }
 }

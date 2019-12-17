@@ -1,41 +1,5 @@
 .App {
   text-align: center;
   height: 100%;
-}
-
-.pages {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(
-    45deg,
-    rgb(25, 25, 25, 0.5),
-    rgb(245, 245, 245) 50%,
-    rgb(220, 220, 220) 50%,
-    rgb(25, 25, 25, 0.5) 100%
-  );
-  /*linear-gradient(60deg, rgba(0, 0, 0, 0) 70%, rgb(150, 150, 150) 70%);*/
-  background-size: cover;
-}
-
-.fade-appear,
-.fade-enter {
-  opacity: 0;
-  z-index: 1;
-}
-
-.fade-appear-active,
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms linear 150ms;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-  opacity: 0;
-  transition: opacity 150ms linear;
+  width: 100%;
 }
