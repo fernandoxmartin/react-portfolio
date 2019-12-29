@@ -3,8 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, rgb(20, 20, 20), rgb(30, 30, 30));
-  border-top: 5px solid #fff;
+  background: linear-gradient(45deg, rgb(10, 10, 10), rgb(20, 20, 20));
 }
 
 .feedback {
@@ -56,7 +55,7 @@ form {
 }
 
 .submit {
-  background: linear-gradient(to bottom, rgb(40, 216, 207), rgb(0, 105, 109));
+  background: rgb(255, 150, 0);
   border: none;
   height: 30px;
   font-family: "Oswald";
@@ -68,8 +67,12 @@ form {
 @media only screen and (max-width: 600px) {
   .feedback {
     width: 80%;
+    font-size: 15px;
   }
   form {
     width: 90%;
+  }
+  .label {
+    font-size: 15px;
   }
 }

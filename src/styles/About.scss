@@ -1,20 +1,13 @@
 .about-container {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.8) 50%,
-      rgba(40, 216, 207, 0.5) 50%,
-      rgba(0, 0, 0, 1)
-    ),
-    url("../images/mountain.jpg");
+  background: linear-gradient(45deg, rgb(10, 10, 10), rgb(20, 20, 20));
   background-size: cover;
   background-position: center center;
-  border-top: 5px solid white;
-  border-bottom: 5px solid white;
+
   .about-container-inner {
     width: 60%;
     height: 60%;
@@ -25,18 +18,19 @@
     .about-left {
       position: relative;
       left: 40px;
-      height: 400px;
-      width: 400px;
+      height: 300px;
+      width: 300px;
       background-image: url("../images/portrait.png");
       background-size: cover;
       border-radius: 50%;
+      border: 3px solid black;
       &:after {
         position: absolute;
         content: "";
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        background: rgba(40, 216, 207, 0.5);
+        background: rgba(0, 0, 0, 0.5);
         transition: 0.5s ease;
       }
       &:hover {
@@ -53,7 +47,7 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      color: rgb(24, 24, 24);
+      color: rgb(255, 150, 0);
       .summary {
         width: 80%;
         font-family: "Poppins";
@@ -94,22 +88,16 @@
 
 @media only screen and (max-width: 600px) {
   .about-container {
-    background: linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.8) 50%,
-        rgba(40, 216, 207, 0.5) 50%,
-        rgba(0, 0, 0, 1)
-      ),
-      url("../images/mountain.jpg");
     background-size: cover;
+    height: 60vh;
     .about-container-inner {
       width: 100%;
       height: 80%;
       flex-direction: column;
       .about-left {
         position: initial;
-        height: 200px;
-        width: 200px;
+        height: 150px;
+        width: 150px;
         &:after {
           position: initial;
           content: "";
@@ -123,6 +111,7 @@
           width: 90%;
           height: 50%;
           font-family: "Poppins";
+          font-size: 14px;
           .highlight {
             font-family: "Oswald";
             color: rgb(255, 90, 0);
@@ -134,7 +123,9 @@
         }
         .summary-skills {
           width: 80%;
+          height: 20%;
           color: rgb(255, 90, 0);
+          font-size: 14px;
           ul {
             font-size: 35px;
             img {

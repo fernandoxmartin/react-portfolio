@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Nav.scss";
 import { Link } from "react-scroll";
-import logo from "../images/logo.png";
 
 class Nav extends Component {
   constructor(props) {
@@ -41,50 +40,50 @@ class Nav extends Component {
     return (
       <nav id="nav">
         <div className="nav-header">
-          <Link to="/">
-            <img className="logo" src={logo} alt="logo" />
+          <Link
+            activeClass="active"
+            className="nav-home"
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            FXM
           </Link>
 
           <div className="nav-links">
             <ul className="list">
               <Link
                 activeClass="active"
-                to="home"
+                to="about"
+                className="nav-about"
                 spy={true}
                 smooth={true}
                 duration={500}
               >
                 <span>01.</span>
-                <li>Home</li>
-              </Link>
-              <Link
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                <span>02.</span>
                 <li>About</li>
               </Link>
               <Link
                 activeClass="active"
                 to="projects"
+                className="nav-projects"
                 spy={true}
                 smooth={true}
                 duration={500}
               >
-                <span>03.</span>
+                <span>02.</span>
                 <li>Projects</li>
               </Link>
               <Link
                 activeClass="active"
                 to="contact"
+                className="nav-contact"
                 spy={true}
                 smooth={true}
                 duration={500}
               >
-                <span>04.</span>
+                <span>03.</span>
                 <li>Contact</li>
               </Link>
             </ul>
@@ -108,24 +107,13 @@ class Nav extends Component {
             <ul className="list-mobile">
               <Link
                 activeClass="active"
-                to="home"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                <li>
-                  <span>01. </span>Home
-                </li>
-              </Link>
-              <Link
-                activeClass="active"
                 to="about"
                 spy={true}
                 smooth={true}
                 duration={500}
               >
                 <li>
-                  <span>02. </span>About
+                  <span>01. </span>About
                 </li>
               </Link>
               <Link
@@ -136,7 +124,7 @@ class Nav extends Component {
                 duration={500}
               >
                 <li>
-                  <span>03. </span>Projects
+                  <span>02. </span>Projects
                 </li>
               </Link>
               <Link
@@ -147,7 +135,7 @@ class Nav extends Component {
                 duration={500}
               >
                 <li>
-                  <span>04. </span>Contact
+                  <span>03. </span>Contact
                 </li>
               </Link>
             </ul>

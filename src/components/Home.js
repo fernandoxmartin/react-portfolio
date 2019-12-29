@@ -4,35 +4,30 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import Nav from "./Nav";
-import { TimelineMax, gsap } from "gsap";
-import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+import { TimelineMax } from "gsap";
 library.add(fab);
 
 class Home extends Component {
   componentDidMount() {
-    gsap.registerPlugin(CSSRulePlugin);
-    let title = document.querySelector(".title-container");
-    const left = CSSRulePlugin.getRule(
-      ".home-container .center .center-content:before"
-    );
-    const right = CSSRulePlugin.getRule(
-      ".home-container .center .center-content:after"
-    );
-
     const tl = new TimelineMax();
-    tl.from(title, 1, { y: -50 })
-      .from(left, 0.5, {
-        cssRule: {
-          opacity: 0,
-          top: "30%"
-        }
-      })
-      .from(right, 0.5, {
-        cssRule: {
-          opacity: 0,
-          top: "30%"
-        }
-      });
+    tl.fromTo(".nav-home", 0.2, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
+      .fromTo(".nav-about", 0.2, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
+      .fromTo(
+        ".nav-projects",
+        0.2,
+        { opacity: 0, y: -100 },
+        { opacity: 1, y: 0 }
+      )
+      .fromTo(
+        ".nav-contact",
+        0.2,
+        { opacity: 0, y: -100 },
+        { opacity: 1, y: 0 }
+      )
+      .fromTo(".F", 0.5, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
+      .fromTo(".X", 0.5, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
+      .fromTo(".M", 0.5, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
+      .fromTo(".center h3", 0.5, { opacity: 0, y: 100 }, { opacity: 1, y: 0 });
   }
 
   render() {
@@ -56,12 +51,12 @@ class Home extends Component {
           </div>
 
           <div className="center">
-            <div className="center-content">
-              <div className="title-container">
-                <h1 className="title">Fernando</h1>
-                <h2 className="subtitle">Software Developer</h2>
-              </div>
+            <div className="fxm">
+              <div className="F">F</div>
+              <div className="X">X</div>
+              <div className="M">M</div>
             </div>
+            <h3>Software Developer</h3>
           </div>
 
           <div className="contact">
