@@ -4,11 +4,13 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import Nav from "./Nav";
-import { TimelineMax } from "gsap";
+import { TimelineMax, gsap, CSSPlugin } from "gsap";
 library.add(fab);
 
 class Home extends Component {
   componentDidMount() {
+    gsap.registerPlugin(CSSPlugin);
+
     const tl = new TimelineMax();
     tl.fromTo(".nav-home", 0.2, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
       .fromTo(".nav-about", 0.2, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
@@ -24,10 +26,10 @@ class Home extends Component {
         { opacity: 0, y: -100 },
         { opacity: 1, y: 0 }
       )
-      .fromTo(".F", 0.5, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
+      .fromTo(".F", 0.5, { opacity: 0, y: -100 }, { opacity: 1, y: 0 }, 1)
       .fromTo(".X", 0.5, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
       .fromTo(".M", 0.5, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
-      .fromTo(".center h3", 0.5, { opacity: 0, y: 100 }, { opacity: 1, y: 0 });
+      .fromTo(".center h3", 0.3, { opacity: 0, y: 100 }, { opacity: 1, y: 0 });
   }
 
   render() {
