@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, rgb(10, 10, 10), rgb(20, 20, 20));
+  background: linear-gradient(45deg, rgb(20, 20, 20), rgb(35, 35, 35));
   background-size: cover;
   background-position: center center;
 
@@ -41,7 +41,7 @@
     }
     .about-right {
       width: 50%;
-      height: 70%;
+      height: 100%;
       text-align: center;
       display: flex;
       flex-direction: column;

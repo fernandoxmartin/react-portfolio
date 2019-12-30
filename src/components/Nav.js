@@ -7,16 +7,36 @@ class Nav extends Component {
     super(props);
     this.state = { isOpen: false };
     this.handleNav = this.handleNav.bind(this);
+    this.closeNav = this.closeNav.bind(this);
   }
 
   handleNav() {
     let nav = this.refs.toggleNav;
+    let logo = this.refs.fxm;
+    let menu = this.refs.menu;
     if (!this.state.isOpen) {
       this.setState({ isOpen: true });
       nav.style.transform = "translateY(0%)";
+      logo.style.color = "#000000";
+      menu.style.stroke = "#000000";
     } else {
       this.setState({ isOpen: false });
       nav.style.transform = "translateY(-100%)";
+      logo.style.color = "#ffffff";
+      menu.style.stroke = "#ffffff";
+    }
+  }
+
+  closeNav() {
+    let nav = this.refs.toggleNav;
+    let logo = this.refs.fxm;
+    let menu = this.refs.menu;
+
+    if (this.state.isOpen) {
+      this.setState({ isOpen: false });
+      nav.style.transform = "translateY(-100%)";
+      logo.style.color = "#ffffff";
+      menu.style.stroke = "#ffffff";
     }
   }
 
@@ -48,7 +68,7 @@ class Nav extends Component {
             smooth={true}
             duration={500}
           >
-            FXM
+            <h3 ref="fxm">FXM</h3>
           </Link>
 
           <div className="nav-links">
@@ -91,14 +111,15 @@ class Nav extends Component {
           <svg
             onClick={this.handleNav}
             className="menu"
-            width="43"
-            height="23"
+            width="40"
+            height="20"
             viewBox="0 0 43 23"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            ref="menu"
           >
-            <line y1="1.5" x2="43" y2="1.5" stroke="white" strokeWidth="3" />
-            <line y1="11.5" x2="35" y2="11.5" stroke="white" strokeWidth="3" />
+            <line y1="1.5" x2="35" y2="1.5" strokeWidth="3" />
+            <line y1="11.5" x2="35" y2="11.5" strokeWidth="3" />
           </svg>
         </div>
 
@@ -112,7 +133,7 @@ class Nav extends Component {
                 smooth={true}
                 duration={500}
               >
-                <li>
+                <li onClick={this.closeNav}>
                   <span>01. </span>About
                 </li>
               </Link>
@@ -123,7 +144,7 @@ class Nav extends Component {
                 smooth={true}
                 duration={500}
               >
-                <li>
+                <li onClick={this.closeNav}>
                   <span>02. </span>Projects
                 </li>
               </Link>
@@ -134,7 +155,7 @@ class Nav extends Component {
                 smooth={true}
                 duration={500}
               >
-                <li>
+                <li onClick={this.closeNav}>
                   <span>03. </span>Contact
                 </li>
               </Link>
