@@ -103,6 +103,18 @@
   stroke: rgb(255, 255, 255);
 }
 
+@media only screen and (max-width: 1200px) {
+  .home-container {
+    .center {
+      .fxm {
+        font-size: 200px;
+        font-family: "Poppins";
+        line-height: 150px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .home-container {
     display: block;
