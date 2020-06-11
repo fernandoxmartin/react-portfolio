@@ -8,8 +8,8 @@ import proj1a from "../images/1a.png";
 import proj1b from "../images/1b.png";
 import proj2a from "../images/2a.png";
 import proj2b from "../images/2b.png";
-import proj3a from "../images/3a.png";
-import proj3b from "../images/3b.png";
+import proj3a from "../images/6a.png";
+import proj3b from "../images/6b.png";
 library.add(fab, faEye);
 
 function Projects() {
@@ -104,24 +104,25 @@ function Projects() {
           </div>
           <div className="project-desc">
             <p>
-              A Fictional Guitar Store built for pedal-heads. Browse through
-              products and build your own combination. Add them to your shopping
-              cart, edit and purchase your gear.
+              A Fictional online guitar store built for guitar and pedalboard
+              enthusiast. Browse through products and build your own
+              combination. Add them to your shopping cart, edit and purchase
+              your gear.
             </p>
           </div>
           <div className="project-stack">
             <ul>
-              <li>HTML</li>
-              <li>CSS</li>
+              <li>React</li>
+              <li>Redux</li>
               <li>Javascript</li>
-              <li>Jquery</li>
+              <li>SASS</li>
             </ul>
           </div>
           <div className="project-links">
-            <a href="https://github.com/fernandoxmartin/guitar-and-pedal">
+            <a href="https://github.com/fernandoxmartin/guitar-pedal">
               <FontAwesomeIcon icon={["fab", "github"]} />
             </a>
-            <a href="https://fernandoxmartin.github.io/guitar-and-pedal/">
+            <a href="https://guitar-pedal.netlify.app/">
               <FontAwesomeIcon icon={["fas", "eye"]} />
             </a>
           </div>
