@@ -4,12 +4,12 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-import proj1a from "../images/1a.png";
-import proj1b from "../images/1b.png";
-import proj2a from "../images/2a.png";
-import proj2b from "../images/2b.png";
-import proj3a from "../images/6a.png";
-import proj3b from "../images/6b.png";
+import proj1a from "../images/job-desktop.png";
+import proj1b from "../images/job-mobile.png";
+import proj2a from "../images/weather-desktop.png";
+import proj2b from "../images/weather-mobile.png";
+import proj3a from "../images/gp-desktop.png";
+import proj3b from "../images/gp-mobile.png";
 library.add(fab, faEye);
 
 function Projects() {
@@ -31,7 +31,6 @@ function Projects() {
             <h4>Featured Project</h4>
             <h1>Job Trackr</h1>
           </div>
-
           <div className="project-desc">
             <p>
               An app to help you stay organized on your job hunt. Add, delete,
@@ -41,6 +40,7 @@ function Projects() {
           </div>
           <div className="project-stack">
             <ul>
+              <li>EJS</li>
               <li>Node</li>
               <li>Express</li>
               <li>Passport</li>
@@ -69,24 +69,25 @@ function Projects() {
           </div>
           <div className="project-desc">
             <p>
-              A React Weather App that fetches JSON data from the OpenWeatherMap
-              API to display the current weather and forecast at the desired
-              location. Search by city name, or Zip Code.
+              A React Weather App that fetches JSON data from the DarkSky API
+              and Google Geolocation API to display the current, weekly or
+              hourly weather forecast at the desired location.
             </p>
           </div>
           <div className="project-stack">
             <ul>
               <li>React</li>
+              <li>Redux</li>
               <li>Sass</li>
               <li>Node</li>
               <li>Express</li>
             </ul>
           </div>
           <div className="project-links">
-            <a href="https://github.com/fernandoxmartin/fxm-weather">
+            <a href="https://github.com/fernandoxmartin/fxmweather">
               <FontAwesomeIcon icon={["fab", "github"]} />
             </a>
-            <a href="https://aqueous-shore-69477.herokuapp.com/">
+            <a href="https://wfxm.herokuapp.com/">
               <FontAwesomeIcon icon={["fas", "eye"]} />
             </a>
           </div>
@@ -116,6 +117,7 @@ function Projects() {
               <li>Redux</li>
               <li>Javascript</li>
               <li>SASS</li>
+              <li>JSON</li>
             </ul>
           </div>
           <div className="project-links">

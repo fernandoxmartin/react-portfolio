@@ -96,22 +96,22 @@
           text-transform: uppercase;
         }
       }
-    }
-    .project-links {
-      width: 20%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
-      font-size: 25px;
-      border-top: 1px solid rgb(63, 63, 63);
-      a {
-        color: rgb(24, 24, 24);
-        transition: 0.2s ease;
-        padding: 10px 0px 0px 20px;
-        &:hover {
-          color: rgb(255, 100, 0);
-          transform: translateY(-5px);
+      .project-links {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 25px;
+        border-top: 1px solid rgb(63, 63, 63);
+        a {
+          color: rgb(24, 24, 24);
+          transition: 0.2s ease;
+          padding: 10px 0px 0px 20px;
+          &:hover {
+            color: rgb(255, 100, 0);
+            transform: translateY(-5px);
+          }
         }
       }
     }
@@ -151,6 +151,7 @@
     border: 1px solid rgb(224, 224, 224);
     height: 70px;
     width: 300px;
+    margin-top: 80px;
     a {
       display: flex;
       justify-content: center;
@@ -172,65 +173,85 @@
 }
 ////////////////////////////////////////////
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1600px) {
   .project-container {
     .project {
-      width: 90%;
-      height: 50%;
-      margin: 50px 0px 50px 0px;
+      width: 80%;
+
       .details {
-        color: rgb(255, 255, 255);
-        align-items: center;
-        .project-title {
-          text-align: center;
-          padding-top: 10px;
-          h4 {
-            display: none;
-          }
-        }
         .project-desc {
           p {
             font-size: 14px;
             width: 90%;
-            text-align: center;
           }
         }
         .project-stack {
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-          padding-bottom: 25px;
+          width: 90%;
           ul {
             width: 80%;
             font-size: 14px;
           }
         }
       }
-      .project-links {
-        width: 50%;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+    }
+  }
+}
+////////////////////////////////////////////
+
+@media only screen and (max-width: 1200px) {
+  .project-container {
+    .project {
+      width: 90%;
+      height: 50%;
+      margin: 50px 0px 50px 0px;
+      .project-image {
+        width: 100%;
       }
 
+      .details {
+        align-items: center;
+        .project-title {
+          width: 100%;
+        }
+        .project-stack {
+          width: 100%;
+          ul {
+            width: 80%;
+            font-size: 14px;
+          }
+        }
+        .project-links {
+          width: 20%;
+          align-self: flex-end;
+          a {
+            padding: 10px 0px 0px 20px;
+          }
+        }
+      }
       &:nth-child(odd) {
+        flex-direction: row-reverse;
+        .project-image {
+          .b-img {
+            left: -5%;
+          }
+        }
         .details {
-          align-items: center;
+          align-items: flex-start;
           .project-title {
+            text-align: start;
           }
           .project-desc {
             p {
-              width: 90%;
-              text-align: center;
+              text-align: start;
             }
           }
           .project-stack {
-            justify-content: space-around;
+            justify-content: flex-start;
           }
           .project-links {
-            justify-content: space-around;
+            align-self: flex-start;
             a {
-              padding: 10px;
+              padding: 10px 20px 0px 0px;
             }
           }
         }
@@ -299,14 +320,14 @@
             width: 80%;
           }
         }
-      }
-      .project-links {
-        width: 100%;
-        justify-content: space-around;
-        align-items: center;
-        a {
-          color: rgb(255, 255, 255);
-          padding: 10px;
+        .project-links {
+          width: 100%;
+          justify-content: space-around;
+          align-items: center;
+          a {
+            color: rgb(255, 255, 255);
+            padding: 10px;
+          }
         }
       }
 
