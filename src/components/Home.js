@@ -38,14 +38,11 @@ class Home extends Component {
         <Nav />
         <div className="home-container">
           <div className="social">
-            <a href="https:///github.com/fernanxomartin">
+            <a href="https:///github.com/fernandoxmartin">
               <FontAwesomeIcon icon={["fab", "github"]} />
             </a>
             <a href="https://linkedin.com/in/fxm">
               <FontAwesomeIcon icon={["fab", "linkedin"]} />
-            </a>
-            <a href="https://instagram.com/fernandomania">
-              <FontAwesomeIcon icon={["fab", "instagram"]} />
             </a>
             <svg className="line" height="200" width="100">
               <line x1="50" y1="10" x2="50" y2="200" />
